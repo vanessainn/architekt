@@ -21,6 +21,31 @@
           <h2>neues Projekt</h2>
         </div>
       </div>
+      <div class="row">
+        <div class="offset-md-3 col-md-9">
+          <form action="db_projekt_insert.php" method="post" enctype="multipart/form-data" class="form_projekte">
+            <label for="arch_projekte_name">Projektname:</label>
+            <input type="text" id="arch_projekte_name" name="arch_projekte_name" required=""><br>
+            <label for="arch_projekte_subtitle">Bauort:</label>
+            <input type="text" id="arch_projekte_subtitle" name="arch_projekte_subtitle" required=""><br>
+            <label for="arch_projekte_beschreibung">Projektbeschreibung:</label>
+            <textarea name="arch_projekte_beschreibung" id="arch_projekte_beschreibung" rows="10" required=""></textarea><br>
+            <label for="arch_projekte_nutzflaeche">Nutzfläche:</label>
+            <input type="text" id="arch_projekte_nutzflaeche" name="arch_projekte_nutzflaeche" required=""><br>
+            <label for="arch_projekte_planungsbeginn">Planungsbeginn:</label>
+            <input type="text" id="arch_projekte_planungsbeginn" name="arch_projekte_planungsbeginn" required=""><br>
+            <label for="arch_projekte_fertigstellung">Fertigstellung:</label>
+            <input type="text" id="arch_projekte_fertigstellung" name="arch_projekte_fertigstellung" required=""><br>
+            <label for="arch_projekte_bauzeit">Bauzeit:</label>
+            <input type="text" id="arch_projekte_bauzeit" name="arch_projekte_bauzeit" required=""><br>
+            <label for="arch_projekte_foto">Projektbild:</label>
+            <input type="file" id="arch_projekte_foto" name="arch_projekte_foto" accept="image/*"><br><br>
+            <div class="button_container">
+              <button type="submit" name="submit" id="submit" value="Neues Projekt anlegen" class="button">Neues Projekt anlegen</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </article>
   </section>
 </main>
