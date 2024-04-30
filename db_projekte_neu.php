@@ -21,27 +21,27 @@
           <h2>neues Projekt</h2>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-5">
         <div class="offset-md-3 col-md-9">
           <form action="db_projekt_insert.php" method="post" enctype="multipart/form-data" class="form_projekte">
-            <label for="arch_projekte_name">Projektname:</label>
-            <input type="text" id="arch_projekte_name" name="arch_projekte_name" required=""><br>
-            <label for="arch_projekte_subtitle">Bauort:</label>
-            <input type="text" id="arch_projekte_subtitle" name="arch_projekte_subtitle" required=""><br>
-            <label for="arch_projekte_beschreibung">Projektbeschreibung:</label>
+            <label for="arch_projekte_name"><strong>Projektname:</strong></label>
+            <input type="text" id="arch_projekte_name" name="arch_projekte_name" required="" placeholder="Projektname eingeben"><br>
+            <label for="arch_projekte_subtitle"><strong>Bauort:</strong></label>
+            <input type="text" id="arch_projekte_subtitle" name="arch_projekte_subtitle" required="" placeholder="Bauort eingeben"><br>
+            <label for="arch_projekte_beschreibung" class="mb-1"><strong>Projektbeschreibung:</strong></label>
             <textarea name="arch_projekte_beschreibung" id="arch_projekte_beschreibung" rows="10" required=""></textarea><br>
-            <label for="arch_projekte_nutzflaeche">Nutzfläche:</label>
-            <input type="text" id="arch_projekte_nutzflaeche" name="arch_projekte_nutzflaeche" required=""><br>
-            <label for="arch_projekte_planungsbeginn">Planungsbeginn:</label>
-            <input type="text" id="arch_projekte_planungsbeginn" name="arch_projekte_planungsbeginn" required=""><br>
-            <label for="arch_projekte_fertigstellung">Fertigstellung:</label>
-            <input type="text" id="arch_projekte_fertigstellung" name="arch_projekte_fertigstellung" required=""><br>
-            <label for="arch_projekte_bauzeit">Bauzeit:</label>
-            <input type="text" id="arch_projekte_bauzeit" name="arch_projekte_bauzeit" required=""><br>
-            <label for="arch_projekte_foto">Projektbild:</label>
+            <label for="arch_projekte_nutzflaeche"><strong>Nutzfläche:</strong></label>
+            <input type="text" id="arch_projekte_nutzflaeche" name="arch_projekte_nutzflaeche" required="" placeholder="Nutzfläche eingeben"><br>
+            <label for="arch_projekte_planungsbeginn"><strong>Planungsbeginn:</strong></label>
+            <input type="text" id="arch_projekte_planungsbeginn" name="arch_projekte_planungsbeginn" required="" placeholder="Jahr des Planungsbeginns eingeben"><br>
+            <label for="arch_projekte_fertigstellung"><strong>Fertigstellung:</strong></label>
+            <input type="text" id="arch_projekte_fertigstellung" name="arch_projekte_fertigstellung" required="" placeholder="Jahr der Fertigstellung eingeben"><br>
+            <label for="arch_projekte_bauzeit"><strong>Bauzeit:</strong></label>
+            <input type="text" id="arch_projekte_bauzeit" name="arch_projekte_bauzeit" required="" placeholder="Gesamte Bauzeit eingeben"><br>
+            <label for="arch_projekte_foto"><strong>Projektbild:</strong></label>
             <input type="file" id="arch_projekte_foto" name="arch_projekte_foto" accept="image/*"><br><br>
             <div class="button_container">
-              <button type="submit" name="submit" id="submit" value="Neues Projekt anlegen" class="button">Neues Projekt anlegen</button>
+              <button type="submit" name="submit" id="submit" value="Neues Projekt anlegen" class="button">Neues Projekt anlegen<i class="fa-solid fa-arrow-right ms-2"></i></button>
             </div>
           </form>
         </div>

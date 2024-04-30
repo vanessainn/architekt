@@ -180,6 +180,25 @@ iframe:hover {
   color: var(--primary);
 }
 
+input {
+  border: none;
+  border-bottom: 2px solid var(--black);
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  border: 2px solid var(--black);
+}
+
+button {
+  background-color: unset;
+  border: none;
+}
+
+
+
 @media (min-width: 768px) {
   .navbar-brand {
     display: none;
