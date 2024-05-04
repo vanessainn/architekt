@@ -9,18 +9,18 @@
           <div>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link text-lowercase" href="db_projekte.php">Projekte</a>
+                <a class="nav-link text-lowercase" href="db_projekte_admin.php">Projekte</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-lowercase" href="index.php#team">Über Uns</a>
+                <a class="nav-link text-lowercase" href="index_admin.php#team">Über Uns</a>
               </li>
               <li class="nav-item">
-                <a href="index.php" class="nav-link link-logo">
+                <a href="index_admin.php" class="nav-link link-logo">
                   <img src="images/architekt-mustermann-logo.png" class="logo" alt="Logo Architekt Mustermann" title="Logo Architekt Mustermann">
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-lowercase" href="index.php#leistungen">Büro</a>
+                <a class="nav-link text-lowercase" href="index_admin.php#leistungen">Büro</a>
               </li>  
               <li class="nav-item">
                 <a class="nav-link text-lowercase" href="db_kontakt.php">Kontakt</a>

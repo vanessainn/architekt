@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
       echo '<p>Das neue Projekt wurde in der Datenbank gespeichert!</p>';
       echo '<div class="mt-3">';
       echo '<a href="db_projekte_neu.php" class="button me-5">Weiteres Projekt anlegen<i class="fa-solid fa-arrow-right ms-2"></i></a>';
-      echo '<a href="db_projekte.php" class="button">Zur Projektübersicht<i class="fa-solid fa-arrow-right ms-2"></i></a>';
+      echo '<a href="db_projekte_admin.php" class="button">Zur Projektübersicht<i class="fa-solid fa-arrow-right ms-2"></i></a>';
       echo '</div>';
       echo '</div>';
       echo '</div>';
@@ -60,8 +60,6 @@ if (isset($_POST['submit'])) {
 }
 
 function get_uploaded_file($file, $tmp_file) {
-  // echo '<br>file: ' . $file;
-  // echo '<br>tmp_file: ' . $tmp_file;
 
   $newName = time() . '_' . $file;
   $destination = 'images/' . $newName;

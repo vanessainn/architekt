@@ -42,7 +42,7 @@
         
         ?>
 
-        <a href="db_projekte.php" class="button">zurück zur Projektübersicht<i class="fa-solid fa-arrow-right ms-2"></i></a> 
+        <a href="db_projekte_admin.php" class="button">zurück zur Projektübersicht<i class="fa-solid fa-arrow-right ms-2"></i></a> 
         
 
         </div>

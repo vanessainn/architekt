@@ -11,39 +11,7 @@
 </head>
 <body>
 
-<header>
-    <nav class="navbar navbar-expand-md px-5 py-3">
-      <div class="container justify-content-between">
-        <a class="navbar-brand" href="index.html"><img src="images/architekt-mustermann-logo.png" alt="Logo Architekt Mustermann" title="Logo Architekt Mustermann" class="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon burger-menu"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-around" id="navbarNavAltMarkup">
-          <div>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link text-lowercase" href="db_projekte.php">Projekte</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-lowercase" href="index.php#team">Über Uns</a>
-              </li>
-              <li class="nav-item">
-                <a href="index.php" class="nav-link link-logo">
-                  <img src="images/architekt-mustermann-logo.png" class="logo" alt="Logo Architekt Mustermann" title="Logo Architekt Mustermann">
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-lowercase" href="index.php#leistungen">Büro</a>
-              </li>  
-              <li class="nav-item">
-                <a class="nav-link text-lowercase" href="db_kontakt.php">Kontakt</a>
-              </li>
-            </ul>
-          </div>
-        </div>  
-      </div>
-    </nav>
-  </header>
+<?php include 'architekt_menu.php'; ?>
 
   <main>
     <section id="projekte">
@@ -75,9 +43,13 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-10">
                       <h3><?php echo $arch_projekte_name ?></h3>
                       <h4><?php echo $arch_projekte_subtitle ?></h4>
+                    </div>
+                    <div class="col-md-2 p-3"> 
+                      <a href='db_projekte_edit.php?id=<?php echo $arch_projekte_id; ?>'><i class="fa-regular fa-pen-to-square fs-4 pe-2"></i></a>
+                      <a href="db_projekte_delete.php?id=<?php echo $arch_projekte_id; ?>"><i class="fa-regular fa-trash-can fs-4"></i></a>
                     </div>
                     <div class="row mt-3 mb-5">
                       <div class="col-md-3">
@@ -102,6 +74,12 @@
         }
         
         ?>
+
+        <div class="row mt-5">
+          <div class="offset-md-3 col-md-9">
+            <a href="db_projekte_neu.php" class="button">neues Projekt anlegen<i class="fa-solid fa-arrow-right ms-2"></i></a> 
+          </div>
+        </div>
 
       </article>
     </section>

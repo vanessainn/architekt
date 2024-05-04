@@ -54,6 +54,8 @@ if ($conn) {
         <input type="text" id="arch_projekte_fertigstellung" name="arch_projekte_fertigstellung" value="<?php echo $arch_projekte_fertigstellung ?>"><br>
         <label for="arch_projekte_bauzeit"><strong>Bauzeit:</strong></label>
         <input type="text" id="arch_projekte_bauzeit" name="arch_projekte_bauzeit" value="<?php echo $arch_projekte_bauzeit ?>"><br>
+        <label for="arch_projekte_foto">Projektfoto:</label>
+        <input id="arch_projekte_foto" type="file" name="arch_projekte_foto" accept="image/*" value="<?php echo $arch_projekte_foto ?>">
         <div class="button_container">
           <button type="submit" name="submit" id="submit" class="button">Änderungen speichern<i class="fa-solid fa-arrow-right ms-2"></i></button>
         </div>

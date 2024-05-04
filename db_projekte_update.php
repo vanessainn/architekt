@@ -31,10 +31,32 @@ if ($conn) {
     $arch_projekte_id = $_GET['id'];
     extract($_POST);
 
+    if ($_FILES['arch_projekte_foto']['error'] === 0) {
+      $filename = $_FILES['arch_projekte_foto']['name'];
+      $temp_name = $_FILES['arch_projekte_foto']['tmp_name'];
+      $folder = "";
+
+      if (move_uploaded_file($temp_name, $folder . $filename)) {
+        $arch_projekte_foto_path = $folder . $filename;
+      } else {
+        echo "Beim Hochladen des Fotos ergab sich ein Fehler.";
+        $arch_projekte_foto_path = null;
+      }  
+    } else {
+      $arch_projekte_foto_path = null;
+    }
+    
+
     $sql = "UPDATE `wda_architekt`.`arch_projekte` SET `arch_projekte_name` = '$arch_projekte_name',
     `arch_projekte_subtitle` = '$arch_projekte_subtitle', `arch_projekte_beschreibung` = '$arch_projekte_beschreibung',
     `arch_projekte_nutzflaeche` = '$arch_projekte_nutzflaeche', `arch_projekte_planungsbeginn` = '$arch_projekte_planungsbeginn',
     `arch_projekte_fertigstellung` = '$arch_projekte_fertigstellung', `arch_projekte_bauzeit` = '$arch_projekte_bauzeit' WHERE (`arch_projekte_id` = '$arch_projekte_id')";
+
+    // if ($arch_projekte_foto_path !== null) {
+    //   $sql .= ", `arch_projekte_foto` = '$arch_projekte_foto_path'";
+    // }
+
+    // $sql .= " WHERE `arch_projekte_id` = '$arch_projekte_id'";
 
     $result = mysqli_query($conn, $sql);
     if ($result) {
@@ -42,7 +64,7 @@ if ($conn) {
     } else {
       echo '<p>Fehler!</p>';
     }
-  }
+  } 
 
     mysqli_close($conn);
 
@@ -52,7 +74,7 @@ if ($conn) {
 ?>
 
  
-     <a href="db_projekte.php" class="button">zurück zur Projektübersicht<i class="fa-solid fa-arrow-right ms-2"></i></a> 
+     <a href="db_projekte_admin.php" class="button">zurück zur Projektübersicht<i class="fa-solid fa-arrow-right ms-2"></i></a> 
     </div>
   </div>
 </div>
