@@ -4,7 +4,6 @@
         <div class="col-md-4">
           <img src="images/architekt-mustermann-logo.png" alt="" class="logo">
           <p class="m-0 mt-3">info@architekt-mustermann.at</p>
-          <p>Projekt von IA Solution</p>
         </div>
         <div class="col-md-4 socials mb-2">
           <i class="fa-brands fa-facebook-f fs-3 pe-3"></i>

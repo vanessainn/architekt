@@ -23,7 +23,7 @@
       </div>
       <div class="row mt-5">
         <div class="offset-md-3 col-md-9">
-          <form action="db_projekte_insert.php" method="post" enctype="multipart/form-data" class="form_projekte">
+          <form action="db_projekt_insert.php" method="post" enctype="multipart/form-data" class="form_projekte">
             <label for="arch_projekte_name"><strong>Projektname:</strong></label>
             <input type="text" id="arch_projekte_name" name="arch_projekte_name" required="" placeholder="Projektname eingeben"><br>
             <label for="arch_projekte_subtitle"><strong>Bauort:</strong></label>

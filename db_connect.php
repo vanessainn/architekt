@@ -5,3 +5,5 @@
   mysqli_set_charset($conn, 'utf8');
   mysqli_select_db($conn, 'wda_architekt');
   } 
+
+?>

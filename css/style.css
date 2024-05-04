@@ -53,6 +53,7 @@
 body {
   font-family: 'Ubuntu', sans-serif;
   color: var(--black);
+  min-height: 100vh;
 }
 
 .logo {
@@ -93,6 +94,10 @@ a:link {
   text-decoration: none;
 }
 
+a:visited {
+  color: var(--black);
+}
+
 h1 {
   font-weight: 300;
   font-size: var(--step-5);
@@ -127,18 +132,15 @@ p {
   margin-bottom: 0;
 }
 
-.button {
+.button:link {
   border-bottom: 2px solid var(--black);
+  text-transform: lowercase;
 }
 
 .button:hover {
   color: var(--primary);
   transform: scale(1.3, 1.3);
   border-color: var(--primary);
-}
-
-.button:visited {
-  color: var(--black);
 }
 
 img, iframe {
@@ -197,7 +199,37 @@ button {
   border: none;
 }
 
+body {
+  cursor: url("../images/cursor.png") 8 8, pointer;
+  cursor: url("../images/cursor.svg") 8 8, pointer;
 
+  cursor: image-set(url("../images/cursor.png") 1x, url("../images/cursor@2x.png") 2x) 8 8, pointer;
+  cursor: -webkit-image-set(url("../images/cursor.png") 1x, url("../images/cursor@2x.png") 2x) 8 8, pointer;
+}
+
+:root {
+  --scrollbarBG: #ffffff;
+  --scrollbarKnop: var(--primary);
+}
+
+html::-webkit-scrollbar{
+  width: 6px;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbarKnop) var(--scrollbarBG);
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarKnop);
+  border-radius: 0;
+  border: none;
+}
 
 @media (min-width: 768px) {
   .navbar-brand {

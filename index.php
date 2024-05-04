@@ -29,13 +29,61 @@
           <div class="col-md-12">
             <h2>Neuheit</h2>
           </div>
-          <div class="row">
-            <div class="offset-md-3 col-md-9">
+
+            <?php 
+        
+        include 'db_connect.php';
+
+        if ($conn) {
+          $sql = "SELECT * FROM wda_architekt.arch_projekte WHERE arch_projekte_fertigstellung = '2024' ORDER BY RAND() LIMIT 1";
+          $result = mysqli_query($conn, $sql);
+
+          if ($result) {
+            while ($row = mysqli_fetch_assoc($result)) {
+              extract($row);
+              ?>
+
+              <div class="row mt-3">
+                <div class="offset-md-3 col-md-9">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <img src=<?php echo 'images/' . $arch_projekte_foto?> alt="" title="" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h3><?php echo $arch_projekte_name ?></h3>
+                      <h4><?php echo $arch_projekte_subtitle ?></h4>
+                    </div>
+                    <div class="row mt-3 mb-5">
+                      <div class="col-md-3">
+                        <p><strong>Nutzfläche:</strong> <?php echo $arch_projekte_nutzflaeche ?></p>
+                        <p><strong>Planungsbeginn:</strong> <?php echo $arch_projekte_planungsbeginn ?></p>
+                        <p><strong>Fertigstellung:</strong> <?php echo $arch_projekte_fertigstellung ?></p>
+                        <p><strong>Bauzeit:</strong> <?php echo $arch_projekte_bauzeit ?></p>
+                      </div>
+                      <div class="col-md-9">
+                        <p><?php echo $arch_projekte_beschreibung ?></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <?php
+
+            }
+          }
+
+        }
+        
+        ?>
+
             </div>
           </div>
         </div>
         <div class="col-md-12 d-flex justify-content-end">
-          <a href="projekte.html" class="button">alle Projekte ansehen<i class="fa-solid fa-arrow-right ms-2"></i></a>  
+          <a href="db_projekte.php" class="button">alle Projekte ansehen<i class="fa-solid fa-arrow-right ms-2"></i></a>  
         </div>
       </article>
     </section>

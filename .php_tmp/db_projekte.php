@@ -37,28 +37,24 @@
 
               <div class="row mt-3">
                 <div class="offset-md-3 col-md-9">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <img src=<?php echo 'images/' . $arch_projekte_foto?> alt="" title="" class="img-fluid">
-                    </div>
-                  </div>
+                  <img src=<?php echo 'images/' . $arch_projekte_foto?> alt="" title="" class="img-fluid">
                   <div class="row">
                     <div class="col-md-10">
                       <h3><?php echo $arch_projekte_name ?></h3>
                       <h4><?php echo $arch_projekte_subtitle ?></h4>
                     </div>
                     <div class="col-md-2 p-3"> 
-                      <a href='db_projekte_edit.php?id=<?php echo $arch_projekte_id; ?>'><i class="fa-regular fa-pen-to-square fs-4 pe-2"></i></a>
-                      <a href="db_projekte_delete.php?id=<?php echo $arch_projekte_id; ?>"><i class="fa-regular fa-trash-can fs-4"></i></a>
+                      <a href="<?php echo 'db_projekte_edit.php?id=' . $wda_architekt_id ?>"><i class="fa-regular fa-pen-to-square fs-4 pe-2"></i></a>
+                      <a href="<?php echo 'db_projekte_delete.php?id=' . $wda_architekt_id ?>"><i class="fa-regular fa-trash-can fs-4"></i></a>
                     </div>
-                    <div class="row mt-3 mb-5">
-                      <div class="col-md-3">
+                    <div class="row mt-3">
+                      <div class="col-md-4">
                         <p><strong>Nutzfläche:</strong> <?php echo $arch_projekte_nutzflaeche ?></p>
                         <p><strong>Planungsbeginn:</strong> <?php echo $arch_projekte_planungsbeginn ?></p>
                         <p><strong>Fertigstellung:</strong> <?php echo $arch_projekte_fertigstellung ?></p>
                         <p><strong>Bauzeit:</strong> <?php echo $arch_projekte_bauzeit ?></p>
                       </div>
-                      <div class="col-md-9">
+                      <div class="col-md-8">
                         <p><?php echo $arch_projekte_beschreibung ?></p>
                       </div>
                     </div>
